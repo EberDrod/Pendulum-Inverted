@@ -21,17 +21,17 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-    input=analogRead(0);
+    input=analogRead(0);  /// Analog Pin0 
     val=setpoint-input;
     in= val;
     pendulo.Compute();
     if (abs(val) > 0){
         if(val > 0){
           sal=12;
-          digitalWrite(13,LOW);
+          digitalWrite(13,LOW); /// Motor uno 
          }else{
             sal=13;
-          digitalWrite(12,LOW);  
+          digitalWrite(12,LOW);  ///Motor dos 
           }
       
       
